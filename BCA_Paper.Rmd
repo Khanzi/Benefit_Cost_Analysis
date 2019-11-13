@@ -44,3 +44,32 @@ Similar to the first proposal, but the system is volunatary.
 |$\gamma$|   |Transplant Operation|
 |$\rho$|   | Social Cost|
 
+## Life Savings $\phi$
+Description: The monetary value of life savings due to an increase in usable kidneys for the use of human transplants
+
+$$ Life\ Savings\ Benefit = \widehat{LAT} * \widehat{\Delta T} * D_s * p(U_k) $$
+
+$\widehat{LAT}$: Average number of years of healthy life after a succesful transplant
+
+$\hat{\Delta T}$: Change (*increase*) in kidney supply.
+
+$D_s$: Dialysis Standard. Roughly $124,000 per year of healthy life.
+
+$p(U_k)$: Probability of sucess/usable kidney
+
+## Tranplant Operation Cost $\gamma$
+Description: The cost of completing an operation. Kidneys can't be sold or bought, but typically the receipient pays for all the medical operations.
+
+$414,800 for kidneys.
+Based on the 2016 Milliman Report.
+
+## Social Cost $\rho$
+Description: Cost to society in USD for involunatarily harvesting deceased prisoners organs without their consent.
+
+$$Social\ Cost = \widehat{p(C)} * \bar{A_m} * \widehat{I_c} $$
+
+$\widehat{p(C)}$: Number of people who would need to have their next of kind compensated for having their kidneys used.
+
+$\bar{A_m}$: Average compensation amount.
+
+$\widehat{I_c}$: Number of LWOP and Death Row inmates.
