@@ -36,7 +36,19 @@ All LWOP and Death Row inmates are involuntarily marked as kidney donors upon th
 
 Similar to the first proposal, but the system is volunatary.
 
+\break
+
 # Technical Plan
+
+## Assumptions
+
+1. All kidneys are healthy and usable
+2. The survey methodology is sound
+3. There is no corruption
+4. We can assume that if a patient in need of a life-saving organ were to decline it due to its origin, that another patient further down the line in need of a transplant would accept it, and as such, we will assume that we can value prisoner’s organs at the same value as non-prisoner’s organs.
+
+
+## Monetization and Quantification
 
 |Symbol|Benefit|Cost| 
 |---|---|---|
@@ -44,26 +56,26 @@ Similar to the first proposal, but the system is volunatary.
 |$\gamma$|   |Transplant Operation|
 |$\rho$|   | Social Cost|
 
-## Life Savings $\phi$
+### Life Savings $\phi$
 Description: The monetary value of life savings due to an increase in usable kidneys for the use of human transplants
 
 $$ Life\ Savings\ Benefit = \widehat{LAT} * \widehat{\Delta T} * D_s * p(U_k) $$
 
 $\widehat{LAT}$: Average number of years of healthy life after a succesful transplant
 
-$\hat{\Delta T}$: Change (*increase*) in kidney supply.
+$\hat{\Delta T}$: Change (*increase*) in kidney supply. Number of LWOP and Death Row inmates that die annually.
 
 $D_s$: Dialysis Standard. Roughly $124,000 per year of healthy life.
 
 $p(U_k)$: Probability of sucess/usable kidney
 
-## Tranplant Operation Cost $\gamma$
+### Tranplant Operation Cost $\gamma$
 Description: The cost of completing an operation. Kidneys can't be sold or bought, but typically the receipient pays for all the medical operations.
 
 $414,800 for kidneys.
 Based on the 2016 Milliman Report.
 
-## Social Cost $\rho$
+### Social Cost $\rho$
 Description: Cost to society in USD for involunatarily harvesting deceased prisoners organs without their consent.
 
 $$Social\ Cost = \widehat{p(C)} * \bar{A_m} * \widehat{I_c} $$
@@ -72,4 +84,30 @@ $\widehat{p(C)}$: Number of people who would need to have their next of kind com
 
 $\bar{A_m}$: Average compensation amount.
 
-$\widehat{I_c}$: Number of LWOP and Death Row inmates.
+$\widehat{I_c}$: Number of LWOP and Death Row inmates that die in prison annualy.
+
+*Footnote:* The probabilities and compensation amounts are calculated on a team authored survey that was sent out to a small sample of people. As the assumption states, we are assuming our methodology is sound. We know it more than likely isn't and the sample is too small to make any real claims about, but we are working on improving the quality of feedback.
+
+### Calculating Net Benefits (NB)
+
+$$ NB = \phi - \gamma - \rho$$
+
+### Discounting 
+
+Assuming that that organs have a relatively high demand elasticity and don't have a direct biological value we don't think discounting them is appropriate. If anything, they are already discounted based on survival rates and healthy years post-op based on the papers we are sourcing our data from.
+
+The other point that could be considered for discounting is adjusting the compensation number for inflation. However we are considering the project on a year-by-year basis and don't think the increase will be drastic enough to warrant consideration.
+
+# Data
+*Still working on ensuring our data is sound and the numbers make sense in scope of our analysis. We feel that the required data is clearly listed and is attainable in a reasonable amount of time*
+
+# Sources
+*Working on it*
+
+# Work to be completed
+
+1. Finding numbers
+2. Summarising and analysing survey data
+3. Proper citation
+4. Listing contingencies.
+5. Finish the write up
