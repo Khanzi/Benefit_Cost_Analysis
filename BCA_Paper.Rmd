@@ -1,0 +1,46 @@
+---
+title: "Life Without Parole Prisoner Organ Donations"
+author: "Kahlil W. Ethan T. Owen. D"
+date: "11/13/2019"
+output: 
+  pdf_document:
+    toc: true
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# *Abstract* {-}
+*We aim to determine if using the kidneys of inmates that are serving life without parole (LWOP) or death row inmates can benefit society. The life savings of decreasing transplant wait list patients might offset the cost of the transplant operation itself, as well as any social costs of an involuntary program. Perhaps even a voluntary one.*
+
+\break
+
+# Importance
+
+There is a global shortage of organs. The most common transplant being kidneys. Many people who could continue to live healthy normal lives if given kidneys are often placed on long waiting lists for organs. Organs legally can't be sold or bought anywhere, except Iran, and **must** be donated. By increasing the supply of organs without any cost to functioning society we could potentially see life savings in the hundreds of milliosns.
+
+
+# Proposition
+
+## Baseline
+
+As with any benefit cost analysis, we will consider a $Net\ Benefits = 0$. We could calculate and quantify the cost of life of the status quo as it relates to people dying on transplant wait-lists. However, it would just work into the primary proposal and cancel out. 
+
+## Primary Proposal
+
+All LWOP and Death Row inmates are involuntarily marked as kidney donors upon their death. There kidneys are then made available to patients on a waiting list.
+
+## Secondary Propoal
+
+Similar to the first proposal, but the system is volunatary.
+
+# Technical Plan
+
+|Symbol|Benefit|Cost| 
+|---|---|---|
+|$\phi$| Life Savings |   |
+|$\gamma$|   |Transplant Operation|
+|$\rho$|   | Social Cost|
+
