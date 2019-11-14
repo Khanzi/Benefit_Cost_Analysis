@@ -1,6 +1,6 @@
 ---
 title: "Life Without Parole Prisoner Organ Donations"
-author: "Kahlil W. Ethan T. Owen. D"
+author: "Kahlil W. Ethan T. Owen. D."
 date: "11/13/2019"
 output: 
   pdf_document:
@@ -13,28 +13,28 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # *Abstract* {-}
-*We aim to determine if using the kidneys of inmates that are serving life without parole (LWOP) or death row inmates can benefit society. The life savings of decreasing transplant wait list patients might offset the cost of the transplant operation itself, as well as any social costs of an involuntary program. Perhaps even a voluntary one.*
+*We aim to determine if using the kidneys of inmates that are serving life without parole (LWOP) or death row inmates can benefit society. The life savings of decreasing transplant waitlist patients might offset the cost of the transplant operation itself, as well as any social costs of an involuntary program. Perhaps even a voluntary one.*
 
 \break
 
 # Importance
 
-There is a global shortage of organs. The most common transplant being kidneys. Many people who could continue to live healthy normal lives if given kidneys are often placed on long waiting lists for organs. Organs legally can't be sold or bought anywhere, except Iran, and **must** be donated. By increasing the supply of organs without any cost to functioning society we could potentially see life savings in the hundreds of milliosns.
+There is a global shortage of organs. The most common transplant being kidneys. Many people who could continue to live healthy normal lives if given kidneys are often placed on long waiting lists for organs. Organs legally can't be sold or bought anywhere, except Iran, and **must** be donated. By increasing the supply of organs without any cost to functioning society we could potentially see life savings in the hundreds of millions.
 
 
 # Proposition
 
 ## Baseline
 
-As with any benefit cost analysis, we will consider a $Net\ Benefits = 0$. We could calculate and quantify the cost of life of the status quo as it relates to people dying on transplant wait-lists. However, it would just work into the primary proposal and cancel out. 
+As with any benefit-cost analysis, we will consider a $Net\ Benefits = 0$. We could calculate and quantify the cost of life of the status quo as it relates to people dying on transplant wait-lists. However, it would just work into the primary proposal and cancel out. 
 
 ## Primary Proposal
 
-All LWOP and Death Row inmates are involuntarily marked as kidney donors upon their death. There kidneys are then made available to patients on a waiting list.
+All LWOP and Death Row inmates are involuntarily marked as kidney donors upon their death. Their kidneys are then made available to patients on a waiting list.
 
-## Secondary Propoal
+## Secondary Proposal
 
-Similar to the first proposal, but the system is volunatary.
+Similar to the first proposal, but the system is voluntary with an incentive. 
 
 \break
 
@@ -42,10 +42,11 @@ Similar to the first proposal, but the system is volunatary.
 
 ## Assumptions
 
-1. All kidneys are healthy and usable
+1. All kidneys are usable for transplant	 
 2. The survey methodology is sound
-3. There is no corruption
-4. We can assume that if a patient in need of a life-saving organ were to decline it due to its origin, that another patient further down the line in need of a transplant would accept it, and as such, we will assume that we can value prisoner’s organs at the same value as non-prisoner’s organs.
+3. There is no corruption in the prison system
+4. If a patient in need of a life-saving organ were to decline it due to its origin, another patient further down the line in need of a transplant would accept it. Therefore, we will value prisoner kidneys the same as non-prisoner kidneys.
+5. Facility and staffing costs will be ignored
 
 
 ## Monetization and Quantification
@@ -59,32 +60,38 @@ Similar to the first proposal, but the system is volunatary.
 ### Life Savings $\phi$
 Description: The monetary value of life savings due to an increase in usable kidneys for the use of human transplants
 
+
+
 $$ Life\ Savings\ Benefit = \widehat{LAT} * \widehat{\Delta T} * D_s * p(U_k) $$
 
-$\widehat{LAT}$: Average number of years of healthy life after a succesful transplant
+$\widehat{LAT}$: Average number of years of healthy life after a successful transplant
 
-$\hat{\Delta T}$: Change (*increase*) in kidney supply. Number of LWOP and Death Row inmates that die annually.
+According to the Beth Israel Deaconess Medical Center, patients who get a kidney transplant before dialysis generally live 10-15 years longer, we will assume that the average is 12.5 years for this calculation. 
 
-$D_s$: Dialysis Standard. Roughly $124,000 per year of healthy life.
+$\hat{\Delta T}$: Change (*increase*) in kidney supply. Number of LWOP and Death Row inmates that die annually multiplied by two, since each person has two donatable kidneys. 
 
-$p(U_k)$: Probability of sucess/usable kidney
+$D_s$: Dialysis Standard. 
 
-### Tranplant Operation Cost $\gamma$
-Description: The cost of completing an operation. Kidneys can't be sold or bought, but typically the receipient pays for all the medical operations.
+Roughly $129,090 per year of healthy life. Based on Lee. 
+
+$p(U_k)$: Probability of success/usable kidney
+
+### Transplant Operation Cost $\gamma$
+Description: The cost of completing an operation. Kidneys cannot be sold or bought, but typically the recipient pays for all the medical operations. 
 
 $414,800 for kidneys.
-Based on the 2016 Milliman Report.
+Based on the 2017 Milliman Report.
 
 ### Social Cost $\rho$
-Description: Cost to society in USD for involunatarily harvesting deceased prisoners organs without their consent.
+Description: Cost to society in USD for involuntarily harvesting deceased prisoner’s organs without their consent. 
 
 $$Social\ Cost = \widehat{p(C)} * \bar{A_m} * \widehat{I_c} $$
 
-$\widehat{p(C)}$: Number of people who would need to have their next of kind compensated for having their kidneys used.
+$\widehat{p(C)}$: Number of people who would need to have their next of kin compensated for having their kidneys used.
 
 $\bar{A_m}$: Average compensation amount.
 
-$\widehat{I_c}$: Number of LWOP and Death Row inmates that die in prison annualy.
+$\widehat{I_c}$: Number of LWOP and Death Row inmates that die in prison annually.
 
 *Footnote:* The probabilities and compensation amounts are calculated on a team authored survey that was sent out to a small sample of people. As the assumption states, we are assuming our methodology is sound. We know it more than likely isn't and the sample is too small to make any real claims about, but we are working on improving the quality of feedback.
 
@@ -96,13 +103,15 @@ $$ NB = \phi - \gamma - \rho$$
 
 Assuming that that organs have a relatively high demand elasticity and don't have a direct biological value we don't think discounting them is appropriate. If anything, they are already discounted based on survival rates and healthy years post-op based on the papers we are sourcing our data from.
 
-The other point that could be considered for discounting is adjusting the compensation number for inflation. However we are considering the project on a year-by-year basis and don't think the increase will be drastic enough to warrant consideration.
+The other point that could be considered for discounting is adjusting the compensation number for inflation. However, we are considering the project on a year-by-year basis and don't think the increase will be drastic enough to warrant consideration.
 
 # Data
 *Still working on ensuring our data is sound and the numbers make sense in scope of our analysis. We feel that the required data is clearly listed and is attainable in a reasonable amount of time*
 
 # Sources
-*Working on it*
+Bentley, T. S. (2017). 2017 U.S. organ and tissue transplant cost estimates and discussion. Milliman Research Report. Retrieved from http://www.milliman.com/uploadedFiles/insight/2017/2017-Transplant-Report.pdf
+Kidney Transplant. (2018). Retrieved from https://www.bidmc.org/centers-and-departments/transplant-institute/kidney-transplant
+Lee, C.P. (2009) An Empiric Estimate of the Value of Life: Updating the ... Retrieved from https://onlinelibrary.wiley.com/doi/full/10.1111/j.1524-4733.2008.00401.x.
 
 # Work to be completed
 
@@ -111,3 +120,4 @@ The other point that could be considered for discounting is adjusting the compen
 3. Proper citation
 4. Listing contingencies.
 5. Finish the write up
+
