@@ -1,0 +1,144 @@
+---
+title: "Appendix A"
+output:
+  pdf_document: default
+  html_document: default
+date: "11/19/2019"
+subtitle: Social Cost Survey
+---
+\fontsize{12}{22}
+\selectfont
+
+```{r setup, include=FALSE}
+setwd("~/Documents/Benefit_Cost_Analysis")
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(knitr)
+library(janitor)
+pods <- read_csv("PODS_data.csv") %>% clean_names()
+```
+
+
+
+# Introduction
+
+For the analysis on social cost we needed to quantify exactly how an involuntary and voluntary organ *donation* system would affect society.
+The philosophy here is that we can quantify and monetize the cost to society of having prisoner kidneys harvested by simpling asking what compensation they would require, if any, if they were in the poisition of a prisoner. Since we are not giving prisoners standing, these numbers may or may not make it into the final analysis.
+
+# Survey Format
+
+The survey format can be viewed [here](https://docs.google.com/forms/d/e/1FAIpQLSdMhMTOhDcevsdVmJhq5VuZXeki-n2zH9OGkrQp9WZMgK_pQw/viewform?usp=sf_link)
+
+
+
+# Survey Taker Demographics
+
+```{r}
+pods$what_is_your_sex %>% as.factor() -> pods$what_is_your_sex
+pods %>% select(what_is_your_sex) %>% 
+  ggplot() +
+  geom_bar(aes(what_is_your_sex, fill = what_is_your_sex), show.legend = FALSE) +
+  labs(title = "Sex") +
+  xlab("sex")
+
+summary(pods$what_is_your_sex) %>% kable(caption = "Sex")
+```
+
+```{r}
+ggplot() +
+  geom_histogram(aes(pods$age)) + 
+  labs(title = "Distribution of Age") +
+  xlab("Age")
+
+```
+
+
+# Visualizations and Analysis
+
+## Do you have an objection?
+
+```{r}
+pods$do_you_have_an_objection %>% as.factor() -> pods$do_you_have_an_objection
+pods %>% select(do_you_have_an_objection) %>% 
+  ggplot() +
+  geom_bar(aes(do_you_have_an_objection, fill = do_you_have_an_objection), show.legend = FALSE) +
+  xlab("Response")
+
+summary(pods$do_you_have_an_objection) %>% kable(caption = "Question 1")
+```
+#### Analysis
+The majority of people don't have an objection to having their organs harvested in prison. At the time of this analysis, out of the 68 survey takers, 88% said "No".
+We will **not** use the median response in our analysis of social cost. Rather we will use the presented figure since it is the most honest and tangible number we have.
+
+## Would you accept compensation?
+
+```{r}
+pods$would_you_accept_compensation %>% as.factor() -> pods$would_you_accept_compensation
+pods %>% select(would_you_accept_compensation) %>% 
+  ggplot() +
+  geom_bar(aes(would_you_accept_compensation, fill = would_you_accept_compensation), show.legend = FALSE) +
+  xlab("Response")
+
+summary(pods$would_you_accept_compensation) %>% kable(ccaption = "Question 2")
+```
+
+#### Analysis
+Since the majority of people didn't have an issue with having their organs donated, only 8 people answered this survey, and from that 8 people only 2 said that they would require compensation. Since the sample size is so small we should still use the probability that compensation is needed to keep the cost on the more conservative side. This will then be multiplied by the number of people who weren't willing to have their organs donated. The statistic here is 25%. Very sensitive, very weak.
+
+
+## How many USD?
+
+```{r}
+table(pods$how_many_usd) %>% kable(caption = "All responses for Question 3")
+```
+
+The two responses we received were neither reasonable or tangible and a sample size of 2 is not reasonable.
+However, factoring in the theoretical $0 amounts from the majority of the survey takers we can get a mean number of \$34,000
+
+## Would you opt-in to being screened?
+
+```{r}
+pods$would_you_opt_into_being_screened %>% as.factor() -> pods$would_you_opt_into_being_screened
+pods %>% select(would_you_opt_into_being_screened) %>% 
+  ggplot() +
+  geom_bar(aes(would_you_opt_into_being_screened, fill = would_you_opt_into_being_screened), show.legend = FALSE) + 
+  xlab("Response")
+
+summary(pods$would_you_opt_into_being_screened) %>% kable(caption = "Question 4")
+```
+
+#### Analysis
+
+51% of respondents said that they would be willing to be screened for a live organ donation.
+
+
+## Would you be willing if your family receives compensation?
+
+```{r}
+pods$your_response %>% as.factor() -> pods$your_response
+pods %>% select(your_response) %>% 
+  ggplot() +
+  geom_bar(aes(your_response, fill = your_response), show.legend = FALSE) +
+  xlab("Response")
+
+summary(pods$your_response) %>% kable(caption = "Question 5")
+```
+
+#### Analysis
+Of the respondents that said no to Question 4, almost 50% of them said they would agree if their family gets compensated.
+
+### How many USD?
+
+```{r}
+pods %>% select(how_many_usd_1) %>% na.omit() %>% 
+  ggplot() +
+  geom_density(aes(how_many_usd_1)) +
+  xlab("USD")
+
+mean(pods$how_many_usd_1, na.rm = TRUE) %>% kable(caption = "Mean opt-in compensation amount")
+```
+
+
+# Acknowledments
+
+We are aware that this survey is not a good approximation of reality. However, it is the best we could do given the time frame of the project. We are in no way suggesting that the answer statistics shown in the response data is an accurate reflection of reality. Alas, it is the only real data we could aquire on this topic and therefore the best we have.

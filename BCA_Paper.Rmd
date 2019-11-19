@@ -7,6 +7,8 @@ output:
     toc: true
     number_sections: true
 ---
+\fontsize{12}{22}
+\selectfont
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -42,7 +44,7 @@ Similar to the first proposal, but the system is voluntary with an incentive.
 
 ## Assumptions
 
-1. All kidneys are usable for transplant	 
+1. The probability of a *prison kidney* being usable is the same as any	 
 2. The survey methodology is sound
 3. There is no corruption in the prison system
 4. If a patient in need of a life-saving organ were to decline it due to its origin, another patient further down the line in need of a transplant would accept it. Therefore, we will value prisoner kidneys the same as non-prisoner kidneys.
@@ -51,11 +53,12 @@ Similar to the first proposal, but the system is voluntary with an incentive.
 
 ## Monetization and Quantification
 
-|Symbol|Benefit|Cost| 
+|Symbol|Benefit|Cost|
 |---|---|---|
-|$\phi$| Life Savings |   |
-|$\gamma$|   |Transplant Operation|
-|$\rho$|   | Social Cost|
+|$\phi$| Life Savings* |   |
+|$\gamma$|   |Transplant Operation*|
+|$\rho$|   | Social Cost*|
+$$\*_{*defined\ below}$$
 
 ### Life Savings $\phi$
 Description: The monetary value of life savings due to an increase in usable kidneys for the use of human transplants
