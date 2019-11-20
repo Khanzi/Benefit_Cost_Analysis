@@ -22,13 +22,11 @@ pods <- read_csv("PODS_data.csv") %>% clean_names()
 
 # Introduction
 
-For the analysis on social cost we needed to quantify exactly how an involuntary and voluntary organ *donation* system would affect society.
-The philosophy here is that we can quantify and monetize the cost to society of having prisoner kidneys harvested by simpling asking what compensation they would require, if any, if they were in the poisition of a prisoner. Since we are not giving prisoners standing, these numbers may or may not make it into the final analysis.
+For the analysis on social cost we needed to quantify the social cost of a voluntary organ *donation* system. We are aiming to monetize the cost to society of having prisoner kidneys harvested by simpling asking what compensation they would require, if any, if they were in the poisition of a prisoner. Prisoners may or may not have standing, but the survey results will be included in the final analysis. 
 
 # Survey Format
 
 The survey format can be viewed [here](https://docs.google.com/forms/d/e/1FAIpQLSdMhMTOhDcevsdVmJhq5VuZXeki-n2zH9OGkrQp9WZMgK_pQw/viewform?usp=sf_link)
-
 
 
 # Survey Taker Demographics
@@ -139,6 +137,10 @@ mean(pods$how_many_usd_1, na.rm = TRUE) %>% kable(caption = "Mean opt-in compens
 ```
 
 
-# Acknowledments
+# Known Issues
 
-We are aware that this survey is not a good approximation of reality. However, it is the best we could do given the time frame of the project. We are in no way suggesting that the answer statistics shown in the response data is an accurate reflection of reality. Alas, it is the only real data we could aquire on this topic and therefore the best we have.
+We are aware that this survey is not representative of the actual social costs of a voluntary organ donation program. In addition, this survey contains no information estimating the social costs of a mandatory donation upon death in prison. The information gathered in the survey is used as a rough estimate for lack of a better source of data. Sources of inaccuracy include:
+- Respondents are not actual prisoners
+- Small sample size
+- The questions posed in the survey are difficult to grasp
+- Survey population is heavily biased 
