@@ -79,11 +79,33 @@ Roughly $129,090 per year of healthy life. Based on Lee.
 
 $p(U_k)$: Probability of success/usable kidney
 
+#### Estimate
+
+$$  (81.2 * (1-0.246) * 129,000 * 10) * 2 = 157,959,984 $$
+
+24.6% of prisoners are not viable donors based on this paper. Conservatively.
+https://www.bjs.gov/content/pub/pdf/mpsfpji1112.pdf
+
 ### Transplant Operation Cost $\gamma$
 Description: The cost of completing an operation. Kidneys cannot be sold or bought, but typically the recipient pays for all the medical operations. 
 
-$414,800 for kidneys.
+#### Estimate
+
+This is an estimate for the increase in consumer surplus due to the provided kidneys (is this actually a measure of CS?). It assumes that the cost of transplant will not change due to the additional 162 supplied kidneys. 
+
+$$414,000 * 81 * 2 = 67,068,000$$
+
+$414,800 for a single kidney transplant.
 Based on the 2017 Milliman Report.
+
+#### Estimate of the reduction in cost to consumers
+
+Assuming:
+- The policy allows for 162 successful kidney transplants
+- In all cases the alternative would have been 10 years of dialysis at a cost of $129,000
+- The aggregate cost of the operations to consumers (as calculatd above) will be  $67,068,000
+
+$$129,000 * 162 * 10 - 67,068,000 = 141,912,000$$
 
 ### Social Cost $\rho$
 Description: Cost to society in USD for involuntarily harvesting deceased prisoner’s organs without their consent. 
@@ -96,11 +118,22 @@ $\bar{A_m}$: Average compensation amount.
 
 $\widehat{I_c}$: Number of LWOP and Death Row inmates that die in prison annually.
 
+#### Estimate
+
+$$  ((0.11*(0.25)) * 57,290) * 34,000 = 49,826,150 $$
+
 *Footnote:* The probabilities and compensation amounts are calculated on a team authored survey that was sent out to a small sample of people. As the assumption states, we are assuming our methodology is sound. We know it more than likely isn't and the sample is too small to make any real claims about, but we are working on improving the quality of feedback.
 
 ### Calculating Net Benefits (NB)
 
 $$ NB = \phi - \gamma - \rho$$
+
+#### Estimate
+
+$$157,959,984 -  49,826,150 - 33,534,000 = 74,599,834$$
+If prisoners don't have standing
+
+$$157,959,984 - 33,534,000 = 124,425,984$$
 
 ### Discounting 
 
