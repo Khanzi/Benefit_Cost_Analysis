@@ -160,8 +160,8 @@ Lee, C.P. (2009) An Empiric Estimate of the Value of Life: Updating the ... Retr
 
 # Work to be completed
 
-1. Finding numbers
-2. Summarising and analysing survey data
+1. Finding numbers |  DONE
+2. Summarising and analysing survey data | DONE
 3. Proper citation
 4. Listing contingencies.
 5. Finish the write up
