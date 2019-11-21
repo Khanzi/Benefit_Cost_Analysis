@@ -63,7 +63,7 @@ Similar to the first proposal, but the system is voluntary with an incentive.
 |$\phi$| Life Savings* |   |
 |$\gamma$|   |Transplant Operation*|
 |$\rho$|   | Social Cost to Prisoners*|
-$$\*_{*defined\ below}$$
+$$*_{*defined\ below}$$
 
 ### Life Savings $\phi$
 Description: The monetary value provided in life savings due to an increase in usable kidney supply. The calculation is relative to the 
@@ -73,7 +73,7 @@ Assumptions:
 - Each patient who is offered a transplant due to the increase in kidney supply would have otherwise paid for dialysis until death. 
 - Patients who get a kidney transplant before dialysis generally live 10-15 years longer, from which we assume the average is 12.5 years (value from Beth Israel Deaconess Medical Center). 
 
-$$ Life\ Savings\ Benefit = \widehat{LAT} * \widehat{\Delta T} * D_s * p(U_k) $$
+$$ Life\ Savings\ Benefit = \widehat{LAT} * \widehat{\Delta T} * D_s $$
 
 $\widehat{LAT}$: Average number of years of healthy life after a successful transplant
 = 12.5
@@ -89,7 +89,7 @@ The Renal Dialysis Standard is a measure of the value of a statistical year of l
 
 #### Estimate
 
-$$  (162.4 * (1-0.246) * 129,000 * 12.5) = 197,449,980 $$
+$$  (162.4 * (1-0.246) * 281,640) = 34,486,705 $$
 
 24.6% of prisoners are not viable donors based on this paper. Conservatively.
 https://www.bjs.gov/content/pub/pdf/mpsfpji1112.pdf
@@ -139,10 +139,10 @@ $$ NB = \phi - \gamma - \rho$$
 #### Estimate
 
 Assuming that prisoners have standing:
-$$157,959,984 -  49,826,150 - 33,534,000 = 74,599,834$$
+$$34,486,705 + 141,912,000 - 49,826,150 = 126,572,555$$
 
 Assuming that prisoners do not have standing:
-$$157,959,984 - 33,534,000 = 124,425,984$$
+$$134,486,705 + 141,912,000 = 276,398,705$$
 
 ### Discounting 
 
