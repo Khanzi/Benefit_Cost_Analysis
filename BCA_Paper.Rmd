@@ -14,8 +14,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Notes
+- Some of the estimates we are using are from 2009, not so confident we've done a good job adjusting for the change in the value of money (is has to be more complicated than an online inflation calculator). So why bother calculating all of them when unsure of how to properly do that. 
+- How do I get dollar signs to look normal without a \ @kahlil
+- Not all patients who lack a donor are going to pay for dialysis until they die. There may be a better way to quantify the value per QALY lost due to organ shortage. 
+
 # *Abstract* {-}
-*We aim to determine if using the kidneys of inmates that are serving life without parole (LWOP) or death row inmates can benefit society. The life savings of decreasing transplant waitlist patients might offset the cost of the transplant operation itself, as well as any social costs of an involuntary program. Perhaps even a voluntary one.*
+*The aim of the study is determining whether kidneys of inmates that are serving life without parole (LWOP) or death row inmates have untapped net value to society. The life savings of decreasing transplant waitlist patients may offset the cost of the transplant operation itself, as well as any social costs of an involuntary program. Perhaps even a voluntary one.*
 
 \break
 
@@ -44,44 +49,47 @@ Similar to the first proposal, but the system is voluntary with an incentive.
 
 ## Assumptions
 
-1. The probability of a *prison kidney* being usable is the same as any	 
+1. The probability of a *prison kidney* being usable can be substituted 
 2. The survey methodology is sound
 3. There is no corruption in the prison system
 4. If a patient in need of a life-saving organ were to decline it due to its origin, another patient further down the line in need of a transplant would accept it. Therefore, we will value prisoner kidneys the same as non-prisoner kidneys.
 5. Facility and staffing costs will be ignored
 
 
-## Monetization and Quantification
+## Monetization of Benefits and Costs
 
 |Symbol|Benefit|Cost|
 |---|---|---|
 |$\phi$| Life Savings* |   |
 |$\gamma$|   |Transplant Operation*|
-|$\rho$|   | Social Cost*|
+|$\rho$|   | Social Cost to Prisoners*|
 $$\*_{*defined\ below}$$
 
 ### Life Savings $\phi$
-Description: The monetary value of life savings due to an increase in usable kidneys for the use of human transplants
+Description: The monetary value provided in life savings due to an increase in usable kidney supply. The calculation is relative to the 
 
-
+Assumptions:
+- *All transplants are successful* (find rates please)
+- Each patient who is offered a transplant due to the increase in kidney supply would have otherwise paid for dialysis until death. 
+- Patients who get a kidney transplant before dialysis generally live 10-15 years longer, from which we assume the average is 12.5 years (value from Beth Israel Deaconess Medical Center). 
 
 $$ Life\ Savings\ Benefit = \widehat{LAT} * \widehat{\Delta T} * D_s * p(U_k) $$
 
 $\widehat{LAT}$: Average number of years of healthy life after a successful transplant
+= 12.5
 
-According to the Beth Israel Deaconess Medical Center, patients who get a kidney transplant before dialysis generally live 10-15 years longer, we will assume that the average is 12.5 years for this calculation. 
+$\hat{\Delta T}$: Change (*increase*) in kidney supply. Number of LWOP and Death Row inmates that die annually multiplied by two, since each person has two donable kidneys. 
+= 162.4
 
-$\hat{\Delta T}$: Change (*increase*) in kidney supply. Number of LWOP and Death Row inmates that die annually multiplied by two, since each person has two donatable kidneys. 
+#### Renal Dialysis Standard $D_s$
+The Renal Dialysis Standard is a measure of the value of a statistical year of life implied by dialysis practice, which averages $129,090 per Quality-Adjusted Life Year (QALY) according to (Lee, 2009)[^1], equal to \$154,503 after adjusting for inflation[^2]. The number is an estimate of the financial value of dialysis compared to no treatment, representing an increase in lifetime and quality of life. The lee paper takes into account life expectancy to calculate and estimate for the mean lifetime cost of dialysis per person, equal to \$337,085 (\$281,640 before adjusting for inflation) 
 
-$D_s$: Dialysis Standard. 
-
-Roughly $129,090 per year of healthy life. Based on Lee. 
-
-$p(U_k)$: Probability of success/usable kidney
+[^1]: https://www.valueinhealthjournal.com/article/S1098-3015(10)60676-6/pdf?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1098301510606766%3Fshowall%3Dtrue
+[^2]: https://westegg.com/inflation/
 
 #### Estimate
 
-$$  (81.2 * (1-0.246) * 129,000 * 10) * 2 = 157,959,984 $$
+$$  (162.4 * (1-0.246) * 129,000 * 12.5) = 197,449,980 $$
 
 24.6% of prisoners are not viable donors based on this paper. Conservatively.
 https://www.bjs.gov/content/pub/pdf/mpsfpji1112.pdf
@@ -98,7 +106,7 @@ $$414,000 * 81 * 2 = 67,068,000$$
 $414,800 for a single kidney transplant.
 Based on the 2017 Milliman Report.
 
-#### Estimate of the reduction in cost to consumers
+### Reduction in cost to consumers
 
 Assuming:
 - The policy allows for 162 successful kidney transplants
@@ -130,9 +138,10 @@ $$ NB = \phi - \gamma - \rho$$
 
 #### Estimate
 
+Assuming that prisoners have standing:
 $$157,959,984 -  49,826,150 - 33,534,000 = 74,599,834$$
-If prisoners don't have standing
 
+Assuming that prisoners do not have standing:
 $$157,959,984 - 33,534,000 = 124,425,984$$
 
 ### Discounting 
